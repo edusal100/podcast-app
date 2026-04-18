@@ -115,19 +115,19 @@ Custom lightweight design system:
 ## 📸 Screenshots
 
 ### Home
-![Home](./assets/screenshots/home.jpg)
+![Home](assets/home.jpg)
 
 ### Podcast Detail
-![Podcast Detail](./assets/screenshots/detail.jpg)
+![Podcast Detail](assets/detail.jpg)
 
 ### Detail (Loading State)
-![Detail Skeleton](./assets/screenshots/detail_skeleton.jpg)
+![Detail Skeleton](assets/detail_skeleton.jpg)
 
 ### Mini Player
-![Mini Player](./assets/screenshots/mini_player.jpg)
+![Mini Player](assets/mini_player.jpg)
 
 ### Full Player
-![Full Player](./assets/screenshots/player_full.jpg)
+![Full Player](assets/player_full.jpg)
 
 ---
 
