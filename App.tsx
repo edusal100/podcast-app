@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import Navigation from "@/navigation";
+import { colors } from "@/theme";
+import { useEffect } from "react";
+import { StatusBar } from "react-native";
+import * as NavigationBar from 'expo-navigation-bar';
+import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { initDb, cleanOldProgress } from "@/services/progressDb";
+
 
 export default function App() {
+
+  useEffect(() =>  {
+    StatusBar.setTranslucent(true);
+    StatusBar.setBackgroundColor('transparent', false);
+    StatusBar.setBarStyle('light-content');
+    NavigationBar.setButtonStyleAsync('light');
+  }, [])
+
+  useEffect(() => {
+    initDb();
+    cleanOldProgress();
+  }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: colors.background }}>
+      <Navigation />
+    </GestureHandlerRootView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
